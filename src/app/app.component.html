@@ -1,0 +1,52 @@
+<md-sidenav-layout fullscreen>
+  <!-- Sidebar -->
+  <md-sidenav #sidenav>
+    <md-card>
+     <!-- <md-card-subtitle>Just a random card</md-card-subtitle> -->
+     <md-card-title>Profile</md-card-title>
+     <!-- <md-card-content>
+          <p>This is supporting text.</p>
+          <p>...and even more text</p>
+     </md-card-content> -->
+     <!-- <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions> -->
+    </md-card>
+    <md-card>
+     <md-card-title>Account</md-card-title>
+    </md-card>
+    <md-card>
+     <md-card-title>Settings</md-card-title>
+    </md-card>
+  </md-sidenav>
+
+  <!-- Toolbar -->
+  <md-toolbar color="primary">
+    <button (click)="sidenav.open()">
+      <svg style="width:24px;height:24px;" viewBox="0 0 24 24">
+        <path fill="#fff" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
+      </svg>
+    </button>
+    <span class="homescreen_headline">My Faved Ones</span>
+
+  </md-toolbar>
+
+  <!-- Routed views go here -->
+  <router-outlet></router-outlet>
+  <!-- <app-locations>
+  </app-locations>
+<hr>
+  <app-google-maps>
+  </app-google-maps> -->
+
+</md-sidenav-layout>
+
+<!-- Footer -->
+<footer color="primary">
+  <md-toolbar color="primary">
+    <md-icon class="icon_home" aria-label="Home" (click)="onNavigate()">home</md-icon>
+    <!-- <button md-button (click)="onNavigate()" class="home">Home</button> -->
+  </md-toolbar>
+  <!-- <p> Placeholder for navigation icons! </p> -->
+</footer>

@@ -1,0 +1,28 @@
+.parent {
+  border: 1px solid lightgrey;
+  box-shadow: 0 0 1px 1px lightgrey;
+  margin: 16px;
+  padding: 1rem;
+  padding-top: -30px;
+}
+
+md-card {
+   margin: 16px;
+}
+
+md-card-actions {
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.icon_grade {
+  margin-left: 140px;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.icon_search {
+  margin-left: 130px;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.54);
+}

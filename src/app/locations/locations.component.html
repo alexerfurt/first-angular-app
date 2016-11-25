@@ -1,0 +1,24 @@
+
+<!-- Search Bar -->
+<div class="parent">
+  <md-input placeholder="City Search">
+
+  </md-input>
+  <md-icon class="icon_search" (click)="onNavigate()">search</md-icon>
+</div>
+<hr/>
+
+<!-- Location card go here -->
+<md-card *ngFor="let location of locations">
+  <img md-card-image [alt]="location.name" [src]="location.image">
+
+ <md-card-title><span>{{location.name}} <md-icon class="icon_grade" (click)="onNavigate()">grade</md-icon></span></md-card-title>
+ <md-card-content class="secondary">
+      {{location.description}}
+ </md-card-content>
+ <md-card-actions>
+    <!-- <button md-raised-button><a [routerLink]="['city']">Show More</a></button> -->
+    <button md-raised-button (click)="onNavigate()">Show More</button>
+    <button md-raised-button color="primary">Share</button>
+  </md-card-actions>
+</md-card>

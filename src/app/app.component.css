@@ -1,0 +1,20 @@
+md-sidenav-layout {
+  margin-buttom: 50px;
+}
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+
+}
+
+.icon_home {
+  margin:0 auto;
+}
+
+.homescreen_headline {
+  margin-left: 16px;
+}
