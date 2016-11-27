@@ -19,6 +19,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import  { routing } from './app.routing';
+import { SpotsComponent } from './spots/spots.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAX8O6qcpVsEKtY-90UtC-FqK9AesR5yCo',
@@ -32,7 +33,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     LocationsComponent,
-    GoogleMapsComponent
+    GoogleMapsComponent,
+    SpotsComponent
   ],
   imports: [
     BrowserModule,

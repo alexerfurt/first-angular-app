@@ -11,6 +11,12 @@ footer {
 
 }
 
+md-input {
+  color: white;
+  font-size: 18px;
+  left: 30px;
+}
+
 .icon_home {
   margin:0 auto;
 }

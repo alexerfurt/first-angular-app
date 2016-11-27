@@ -1,0 +1,12 @@
+md-card {
+   margin: 16px;
+}
+
+md-card-actions {
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+hr {
+  margin-top: 0;
+}

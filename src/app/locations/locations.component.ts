@@ -1,51 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+//import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
+import { Location } from './location';
+import { LocationService } from './location.service';
 
 @Component({
   selector: 'app-locations',
   templateUrl: './locations.component.html',
-  styleUrls: ['./locations.component.css']
+  styleUrls: ['./locations.component.css'],
+  providers: [LocationService]
 })
 export class LocationsComponent implements OnInit {
+  locations: Location[];
   // locations: FirebaseListObservable<any[]>;
-
-  locations: Object[] = [
-    {
-      name: "Berlin, Germany",
-      image: "img/berlin.jpg",
-      description: "Collection of your favorite places in Berlin"
-    },
-    {
-      name: "Dublin, Ireland",
-      image: "img/dublin.jpg",
-      description: "Collection of your favorite places in Dublin"
-    },
-    {
-      name: "Lisbon, Portugal",
-      image: "img/lisbon.jpg",
-      description: "Collection of your favorite places in Lisbon"
-    },
-    {
-      name: "London, UK",
-      image: "img/london.jpg",
-      description: "Collection of your favorite places in London"
-    }
-
-  ];
-
   // constructor(af: AngularFire) {
   //   this.items = af.database.list('locations');
   // }
 
-  constructor(private router: Router) {}
+  constructor(
+    private locationService: LocationService,
+    private router: Router) {}
 
-    ngOnInit() {
-    }
+  getLocations(): void {
+    this.locations = this.locationService.getLocations();
+  }
 
-    onNavigate() {
-      this.router.navigate(['city']);
-    }
+  ngOnInit(): void {
+    this.getLocations();
+  }
+
+  onNavigate() {
+    this.router.navigate(['city']);
+  }
 
 
 }
